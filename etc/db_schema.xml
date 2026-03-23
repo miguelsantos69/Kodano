@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="salesrule">
+        <column xsi:type="smallint" name="on_mobile" unsigned="true" nullable="false" default="0"
+                comment="Is the coupon valid for mobile devices"/>
+    </table>
+</schema>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/mobile-coupons/search" method="GET">
+        <service class="Kodano\MobileCoupon\Api\Service\MobileCouponServiceInterface" method="getList"/>
+        <resources>
+            <resource ref="Magento_SalesRule::manage"/>
+        </resources>
+    </route>
+    <route url="/V1/mobile-coupons" method="POST">
+        <service class="Kodano\MobileCoupon\Api\Service\MobileCouponServiceInterface" method="addMobileCoupon"/>
+        <resources>
+            <resource ref="Magento_SalesRule::manage"/>
+        </resources>
+    </route>
+    <route url="/V1/mobile-coupons/:couponId" method="DELETE">
+        <service class="Kodano\MobileCoupon\Api\Service\MobileCouponServiceInterface" method="deleteMobileCoupon"/>
+        <resources>
+            <resource ref="Magento_SalesRule::manage"/>
+        </resources>
+    </route>
+</routes>
